@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>April 2016</title>
+    <style>
+      * {
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+      }
+      body {
+        background-color:#595caf;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 15vh 0;
+        font-family: sans-serif;
+        color:#595caf;
+        font-weight: 600;
+      }
+
+      #container {
+        min-width:720px;
+        background-color:#b48fe8;
+      }
+
+      table {
+        background-color:#b48fe8;
+      }
+
+      table td {
+        padding:.6em;
+      }
+
+      input[type="text"] {
+        padding: .3em;
+      }
+
+      input[type="checkbox"], input[type="radio"] {
+        margin:.5em;
+      }
+
+      button {
+        padding:1em;
+        background:#595caf;
+        color:#b48fe8;
+        cursor:pointer;
+        font-weight: 900;
+        border:none;
+        text-transform: uppercase;
+      }
+
+      .warning {
+        color:white;
+      }
+
+      .hidden {
+        display:none;
+      }
+
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <form name="forma">
+        <table>
+          <tr>
+            <td>
+              <label class="obvz">FIRST LAST NAME</label>
+            </td>
+            <td>
+              <input type="text" id="fnln" name="polje" />
+            </td>
+            <td class="warning w1">(max 30 characters A-Z, a-z and space)</td>
+          </tr>
+
+          <tr>
+            <td>
+              <label>DATE OF BIRTH</label>
+            </td>
+            <td>
+              <select id="day"></select>
+              <select id="month"></select>
+              <select id="year"></select>
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <label class="obvz">EMAIL</label>
+            </td>
+            <td>
+              <input type="text" id="email" name="polje" />
+            </td>
+            <td class="warning w2">
+              (name.surname(.id.year)@ict.edu.rs)
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <label class="obvz">MOBILE NUMBER</label>
+            </td>
+            <td>
+              <input type="text" id="mob" name="polje"/>
+            </td>
+            <td class="warning w3">(96xyyyy..., 10 digit number)</td>
+          </tr>
+
+          <tr>
+            <td>
+              <label>GENDER</label>
+            </td>
+            <td>
+              <label>Male</label> <input type="radio" name="gender" />
+              <label>Female</label><input type="radio" name="gender" />
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <label class="obvz">CITY</label>
+            </td>
+
+            <td>
+              <input type="text" id="city" name="polje" />
+            </td>
+            <td class="warning w4">(max 30 characters a-z and A-Z)</td>
+          </tr>
+
+          <tr>
+            <td>
+              <label class="obvz">PIN CODE</label>
+            </td>
+            <td>
+              <input type="text" id="pin" name="polje" />
+            </td>
+            <td class="warning w5">(6 digit number)</td>
+          </tr>
+
+          <tr>
+            <td>
+              <label>HOBBIES</label>
+            </td>
+            <td>
+              <label>Drawing</label><input type="checkbox" name="chb" />
+              <label>Singing</label><input type="checkbox" name="chb" /><br/>
+              <label>Dancing</label><input type="checkbox" name="chb" />
+              <label>Sketching</label><input type="checkbox" name="chb" /><br/>
+              <label>Others</label><input type="checkbox" name="chb" id="drugi" /><br/>
+              <input type="text" class="others" />
+            </td>
+          </tr>
+
+          <tr>
+            <td>
+              <button type="submit" class="button hidden">Submit</button>
+            </td>
+            <td id="greske">
+
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="skripta.js"></script>
+  </body>
+</html>
